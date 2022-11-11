@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A_出入校扫描</title>
     <link rel="shortcut icon" href="https://www.cueb.edu.cn/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./css/CUEB.css">
-    <script src="./js/vue-2.6.12.js"></script>
+    <link rel="stylesheet" href="./css/pass.css">
+    <script src=" ./js/vue-2.6.12.js"></script>
 </head>
 
 <body>
@@ -95,19 +95,33 @@
         </table>
         <div class="panel">
 
-            <img src="./image/CUEB/SJM.gif" alt="SJM" class="SJM">
+            <img src="./image/SJM.gif" alt="SJM" class="SJM">
             <div>部门:&nbsp;{{department}}</div>
             <div>姓名:&nbsp;{{name}}</div>
             <div>学工号:&nbsp;{{studentId}}</div>
             <div>核酸检测:&nbsp;<i class="red">{{nucleicAcid}} </i>&nbsp;天</div>
             <div class="green">通过</div>
-            <img src="./image/CUEB/pass.gif" alt="pass" class="pass">
+            <img src="./image/pass.gif" alt="pass" class="pass">
 
-            <div class="right">
-                申请有效期:&nbsp; <i class="red">{{startTime.replace('T', ' ')}}</i><br>
-                至:&nbsp;<i class="red">{{endTime.replace('T', ' ')}}</i>
-            </div>
-            <img src="./image/CUEB/CUEB.jpg" alt="CUEB" class="CUEB">
+            <table class="right">
+                <tr>
+                    <td>申请有效期:</td>
+                    <td class="red">{{startTime.replace('T', ' ')}}</td>
+                </tr>
+                <tr>
+                    <td>至:</td>
+                    <td class="red">{{endTime.replace('T', ' ')}}</td>
+                </tr>
+            </table>
+
+            <!-- <div class="right">
+                申请有效期:&nbsp;
+                <i class="red">{{startTime.replace('T', ' ')}}</i><br>
+                至:
+                &nbsp;<i class="red">{{endTime.replace('T', ' ')}}</i>
+            </div> -->
+
+            <img src="./image/CUEB.jpg" alt="CUEB" class="CUEB">
         </div>
     </article>
     <script>
